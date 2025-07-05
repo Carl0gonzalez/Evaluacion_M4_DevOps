@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -8,42 +9,53 @@
   <artifactId>HealthTrack-Autotests</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>HealthTrack-Autotests</name>
+  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+
+    <!-- Versiones de dependencias -->
     <junit.jupiter.version>5.9.2</junit.jupiter.version>
     <selenium.version>4.11.0</selenium.version>
+    <webdrivermanager.version>5.3.2</webdrivermanager.version>
   </properties>
 
   <dependencies>
-    <!-- JUnit 5 -->
+    <!-- JUnit 5 API -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- JUnit 5 Engine -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
-
-    <!-- Selenium para pruebas funcionales -->
+    <!-- Selenium Java para pruebas funcionales -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- WebDriverManager para gestionar el driver automáticamente -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Compiler plugin: Java 17 -->
+      <!-- Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -53,13 +65,13 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
-
-      <!-- Surefire: ejecutar JUnit 5 -->
+      <!-- Surefire para JUnit 5 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M7</version>
         <configuration>
+          <!-- Permite ejecutar JUnit 5 en Java 9+ sin module-path -->
           <useModulePath>false</useModulePath>
         </configuration>
       </plugin>
