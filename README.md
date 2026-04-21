@@ -1,29 +1,22 @@
 # 🔁 Evaluacion_M4_DevOps
 
-Repositorio de evaluación con foco en **DevOps**, pensado para reunir prácticas de automatización, estructura técnica y flujos reproducibles.
+Repositorio de evaluación con foco en **prácticas DevOps, automatización y estructura técnica reproducible**.
 
 ![DevOps](https://img.shields.io/badge/DevOps-learning-0A7E8C)
 
----
+## Descripción
 
-## 📌 Objetivo
+Funciona como soporte de una evaluación práctica donde el repositorio es parte del entregable técnico, posiblemente con scripts, configuraciones o lineamientos de flujo.
 
-Documentar una evaluación práctica donde se aplican principios de integración, automatización y organización de entregables técnicos.
+## Objetivo
 
-## 🧩 Qué muestra
+Documentar y respaldar una implementación ligada a conceptos de integración, automatización y trabajo ordenado.
 
-- Uso de repositorio como soporte del proceso técnico.
-- Posible integración con scripts o herramientas de automatización.
-- Enfoque orientado a buenas prácticas DevOps.
+## Uso
 
-## ▶️ Uso general
+Clona el proyecto y revisa la estructura específica para identificar el flujo de ejecución o configuración.
 
-```bash
-git clone git@github.com:Carl0gonzalez/Evaluacion_M4_DevOps.git
-cd Evaluacion_M4_DevOps
-```
-
-## 👤 Autor
+## Autor
 
 **Carlo González**
 
